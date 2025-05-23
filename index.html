@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dashboard-UI</title>
+  <title>Dashboard_UI</title>
   <style>
     body {
       margin: 0;
@@ -96,6 +96,21 @@
     .calendar div:hover {
       background: #3a3a3a;
     }
+
+    .notification-card {
+      animation: slideIn 1s ease-out;
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateX(100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
   </style>
 </head>
 <body>
@@ -139,6 +154,15 @@
       <div class="progress-bar"></div>
     </div>
     <p>3 Remaining Projects</p>
+  </div>
+
+  <div class="card notification-card">
+    <h3>Notifications</h3>
+    <ul>
+      <li>New message from client</li>
+      <li>Project deadline in 3 days</li>
+      <li>Meeting scheduled at 2 PM</li>
+    </ul>
   </div>
 
 </body>
