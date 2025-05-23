@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard UI</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #121212;
+      color: white;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+      gap: 20px;
+    }
+
+    .card {
+      background: #1f1f1f;
+      border-radius: 15px;
+      padding: 20px;
+      width: 250px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .profile-card {
+      text-align: center;
+    }
+
+    .highlight {
+      color: #ff4d6d;
+      font-weight: bold;
+    }
+
+    .btn {
+      background: #5a4ff3;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #4236d6;
+    }
+
+    .progress-container {
+      background: #333;
+      border-radius: 10px;
+      overflow: hidden;
+      height: 20px;
+      margin-top: 10px;
+    }
+
+    .progress-bar {
+      height: 100%;
+      background: #5a4ff3;
+      width: 75%;
+      animation: loadProgress 2s ease-out forwards;
+    }
+
+    @keyframes loadProgress {
+      from {
+        width: 0;
+      }
+      to {
+        width: 75%;
+      }
+    }
+
+    .calendar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .calendar div {
+      background: #292929;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      transition: background 0.3s;
+    }
+
+    .calendar div:hover {
+      background: #3a3a3a;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card profile-card">
+    <h2 class="highlight">Hira R.</h2>
+    <p>UX/UI Designer</p>
+    <p>125 Projects | $124 Revenue</p>
+  </div>
+
+  <div class="card">
+    <h3>Total Revenue</h3>
+    <p class="highlight">$92,983</p>
+    <div class="progress-container">
+      <div class="progress-bar"></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Free Slots Available</h3>
+    <div class="calendar">
+      <div>12<br>June</div>
+      <div>18<br>June</div>
+      <div>20<br>June</div>
+      <div>02<br>July</div>
+      <div>10<br>July</div>
+      <div>15<br>July</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Go Pro</h3>
+    <p>Upgrade your plan to get pro benefits</p>
+    <button class="btn">Let's Start</button>
+  </div>
+
+  <div class="card">
+    <h3>Project Progress</h3>
+    <p class="highlight">75%</p>
+    <div class="progress-container">
+      <div class="progress-bar"></div>
+    </div>
+    <p>3 Remaining Projects</p>
+  </div>
+
+</body>
+</html>
